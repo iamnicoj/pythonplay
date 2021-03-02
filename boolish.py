@@ -16,6 +16,13 @@ try:
 except ValueError:
   print("SomeError")
 
+try:
+  var22 = ""
+  print(f"var2 = {var22}")
+  print(bool(var22))
+except ValueError:
+  print("SomeError")
+
 number = 10
 print("number = 10")
 print(bool(number))
