@@ -8,3 +8,8 @@ print("%5.2f" % float2)
 
 evenBetter = "than the real thing"
 print(f"Even better {evenBetter}")
+
+str = "Some Python work to Python more to Python rocks"
+
+print(f"count python = {str.count('Python')}")
+
