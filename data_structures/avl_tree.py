@@ -66,7 +66,6 @@ class avl_tree:
         if current.data == data :
             if current.left is None and current.right is None:
                 return None
-            # if current is None: return current
             balance = current.node_balance()
             # check balance
             if balance > 0:
