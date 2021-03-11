@@ -21,6 +21,8 @@ print(cars.count("BMW"))
 
 print(f"index Tesla = {cars.index('Tesla')}")
 
+if "asdf" not in cars: print("asdf doesn't exist")
+
 print("Reverse ")
 cars.reverse()
 print(cars)
