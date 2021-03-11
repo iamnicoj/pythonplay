@@ -27,3 +27,23 @@ else:
 print('matrix multiplication')
 columns, rows = len(a), len(w[0])
 print(columns, rows )
+
+matrix = []
+matrix.append([1,2,3])
+matrix.append([1,2,3])
+print(matrix)
+
+print('append on empty matrices')
+matrix = []
+crazy = [[3]]
+
+for array in crazy:
+  print(array)
+  array.extend([4])
+  print(array)  
+  matrix.append(array)
+  print(matrix)
+
+# matrix.append(crazy.extend([1]))
+# matrix.append([1,2,3])
+# print(matrix)
