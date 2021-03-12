@@ -12,4 +12,5 @@ print(f"Even better {evenBetter}")
 str = "Some Python work to Python more to Python rocks"
 
 print(f"count python = {str.count('Python')}")
+print(str.find("work"))
 
