@@ -104,15 +104,17 @@ def all_construct(target, word_bank):
     return _all_construct(target, word_bank, {})
 
 def _all_construct(target, word_bank, memo):
+    if memo.get(target, None) is not None:
+        return memo[target]
     if target == '':
         return [[]]
     
-    final_result = copy.deepcopy([]) # nope
+    final_result = []
 
     for word in word_bank:
         if target.find(word, 0 ) == 0:
             target_copy = copy.deepcopy(target)
-            target_second_copy = copy.deepcopy(target_copy[slice(len(word), len(target))]) # nope
+            target_second_copy = target_copy[slice(len(word), len(target))]
 
             parcial_result = _all_construct(target_second_copy, word_bank, memo)
 
@@ -120,8 +122,9 @@ def _all_construct(target, word_bank, memo):
                 for array in parcial_result:
                     added_word = copy.deepcopy([word])
                     added_word.extend(array)
-                    final_result.append(copy.deepcopy(added_word))
+                    final_result.append(added_word)
     
+    memo[target] = final_result
     return final_result 
                 
 print('all_construct')
