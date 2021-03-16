@@ -79,7 +79,22 @@ class basic_graph():
     
     # Iterative solution with a queue ;)
     def bfsearch_iterative(self, from_point_a):
-        raise NotImplementedError()
+        node_a = self.search(from_point_a)
+        if node_a is None: return
+        
+        visited_nodes = []
+        queue = []
+
+        queue.append(node_a)
+        
+        while len(queue) > 0:
+             current_node = queue.pop()
+             visited_nodes.append(current_node)
+             print(f"touch: {current_node.data}")
+             for neiborgh in current_node.adjacent:
+                 if (neiborgh not in visited_nodes) and (neiborgh not in queue):
+                    queue.insert(0, neiborgh)
+
 
     def bfsearch(self, from_point_a):
         node_a = self.search(from_point_a)
@@ -124,6 +139,8 @@ my_graph.add_node("me")
 my_graph.add_node("to")
 my_graph.add_node("the")
 my_graph.add_node("park")
+my_graph.add_node("other")
+my_graph.add_node("random")
 my_graph.add_adjacent("walk", "with", False)
 # my_graph.add_adjacent("walk", "with", False) // raise value exception
 my_graph.add_adjacent("me", "with", False)
@@ -131,8 +148,13 @@ my_graph.add_adjacent("with", "to", False)
 my_graph.add_adjacent("to", "the", False)
 my_graph.add_adjacent("the", "me", True)
 my_graph.add_adjacent("the", "walk", True)
+my_graph.add_adjacent("the", "other", True)
+my_graph.add_adjacent("the", "random", True)
 
 my_graph.print_graph()
+
+value = input("BFS iterative Starting point: ")
+my_graph.bfsearch_iterative(value)
 
 value = input("DFS Starting point: ")
 my_graph.dfsearch(value)
