@@ -43,3 +43,5 @@ print(listComprehension)
 othercomprehension = [char for char in "gimme love"]
 print(othercomprehension)
 
+print ([0] * 10)
+print ([2,3,5,] == 8)

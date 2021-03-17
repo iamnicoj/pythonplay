@@ -16,3 +16,9 @@ thisisaset.remove(2)
 print(thisisaset)
 
 print(thisisaset.intersection({67, 32, 100, 99}))
+
+thisisalsoatest = set([3])
+thisisalsoatest.add(4)
+thisisalsoatest.add(4)
+
+print(thisisalsoatest)
