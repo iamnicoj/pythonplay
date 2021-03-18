@@ -43,3 +43,22 @@ print(listComprehension)
 othercomprehension = [char for char in "gimme love"]
 print(othercomprehension)
 
+##############
+print('\n\nslicing problems:')
+start = 2
+stop = 5
+a = [1,2,3,4,5,6,7,8]
+print(a[start:stop])  # items start through stop-1
+print(a[start:])      # items start through the rest of the array
+print(a[:stop])       # items from the beginning through stop-1 
+print(a[:])           # a copy of the whole array
+
+print(a[-1])    # last item in the array
+print(a[-2:])   # last two items in the array
+print(a[:-2])   # everything except the last two items
+
+print(a[::-1])    # all items in the array, reversed
+print(a[1::-1])  # the first two items, reversed
+print(a[:-3:-1])  # the last two items, reversed
+print(a[-3::-1])  # everything except the last two items, reversed
+

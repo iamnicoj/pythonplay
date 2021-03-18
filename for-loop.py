@@ -4,3 +4,6 @@ print("Then lets do something basic like a line \nyeap\n")
 for day in range(len(weekdays)):
     print(weekdays[day])
 
+for x in range(2, 6):
+  print(x) 
+  
