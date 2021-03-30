@@ -169,7 +169,7 @@ class avl_tree:
         if current is None: return 0
         self._inner_print_inorder(current.left, level + 1)
         current.print_node(level)
-        return self._inner_print_inorder(current.right, level + 1)
+        self._inner_print_inorder(current.right, level + 1)
 
 
 my_tree = avl_tree()
