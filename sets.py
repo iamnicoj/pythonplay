@@ -22,3 +22,5 @@ thisisalsoatest.add(4)
 thisisalsoatest.add(4)
 
 print(thisisalsoatest)
+
+teams = { [1,2], ["rew", "tesw"]}
